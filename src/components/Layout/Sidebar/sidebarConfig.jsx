@@ -4,7 +4,7 @@ import React from 'react';
 export const sidebarConfig = [
   {
     name: 'TSCS Overview',
-    icon: <Globe className="h-5 w-5 text-red-600" />,
+    icon: <Globe className="h-5 w-5 text-blue-600" />,
     link: '/overview',
     subItems: [
       { name: 'Board Members', link: '/overview/board-members' },
@@ -17,7 +17,7 @@ export const sidebarConfig = [
   },
   {
     name: 'Activities',
-    icon: <Activity className="h-5 w-5 text-red-600" />,
+    icon: <Activity className="h-5 w-5 text-blue-600" />,
     link: '/activities',
     subItems: [
       { name: 'Diagnostic', link: '/activities/diagnostic' },
@@ -29,7 +29,7 @@ export const sidebarConfig = [
   },
   {
     name: 'Visitors',
-    icon: <Users className="h-5 w-5 text-red-600" />,
+    icon: <Users className="h-5 w-5 text-blue-600" />,
     link: '/visitors',
     subItems: [
       { name: 'National', link: '/visitors/national' },
@@ -38,7 +38,7 @@ export const sidebarConfig = [
   },
   {
     name: 'Blood Donation Camps',
-    icon: <Droplet className="h-5 w-5 text-red-600" />,
+    icon: <Droplet className="h-5 w-5 text-blue-600" />,
     link: '/blood-donation',
     subItems: [
       { name: 'Corporates', link: '/blood-donation/corporates' },
@@ -48,7 +48,7 @@ export const sidebarConfig = [
   },
   {
     name: 'Awareness Programs',
-    icon: <Lightbulb className="h-5 w-5 text-red-600" />,
+    icon: <Lightbulb className="h-5 w-5 text-blue-600" />,
     link: '/awareness',
     subItems: [
       { name: 'CMEs', link: '/awareness/cmes' },

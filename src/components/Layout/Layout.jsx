@@ -10,7 +10,7 @@ export const Layout = ({ children }) => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-blue-50">
       <Navigation toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen} />
       <div className="flex pt-16">
         <Sidebar isOpen={isSidebarOpen} />
