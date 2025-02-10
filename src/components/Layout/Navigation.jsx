@@ -79,7 +79,7 @@ const Navigation = ({ toggleSidebar, isSidebarOpen }) => (
                 className="w-14 h-20 object-contain"
               />
               <div className="ml-2 flex flex-col">
-                <span className="text-xl font-bold text-white">Thalassemia and Sickle Cell Society (TSCS)</span>
+                <span className="text-2xl font-bold text-white">Thalassemia and Sickle Cell Society (TSCS)</span>
                 <span className="text-sm text-white">Hyderabad, India</span>
               </div>
             </Link>

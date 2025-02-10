@@ -26,7 +26,8 @@ export const sidebarConfig = [
       { name: 'Blood Bank', link: '/activities/blood-bank' },
       { name: 'Research', link: '/activities/research' },
       { name: 'Advanced Diagnostic', link: '/activities/advanced-diagnostic' },
-      { name: 'Video Gallery', link: '/activities' }
+      { name: 'Video Gallery', link: '/activities' },
+      { name: 'Photo Gallery', link: '/activities/photos' },
     ]
   },
   {

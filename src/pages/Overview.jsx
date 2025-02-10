@@ -54,26 +54,142 @@ const Overview = () => {
   );
 };
 
-const BoardMembers = () => (
-  <div className="bg-blue-50 p-6">
-    <h1 className="text-3xl font-bold text-blue-900 mb-8">Board Members</h1>
-    <div className="grid md:grid-cols-2 gap-6">
-      {[
-        {
-          name: "Dr. Sample Name",
-          position: "President",
-          bio: "Over 20 years of experience in treating blood disorders."
-        },
-      ].map((member, index) => (
-        <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-blue-100 hover:bg-blue-50 transition-colors">
-          <h2 className="text-xl font-semibold text-blue-800 mb-2">{member.name}</h2>
-          <p className="text-blue-600 mb-2">{member.position}</p>
-          <p className="text-blue-700">{member.bio}</p>
+const BoardMembers = () => {
+  const members = [
+    {
+      name: "LATE DR. A.N. KRISHNA KUMARI",
+      position: "FOUNDER PRESIDENT",
+      bio: "To have all the services for Thalassemia under one roof."
+    },
+    {
+      name: "LATE DR. HARIPRIYA RANGARAJAN",
+      position: "CHIEF PATRON",
+      bio: "Life's most important question is: What are we doing for the society?"
+    },
+    {
+      name: "MR. NARESH RATHI",
+      position: "CHIEF PATRON",
+      bio: "I Believe: Very little is needed to make a happy life; it is all within yourself, in your way of thinking."
+    },
+    {
+      name: "MR SHYAM LOYA",
+      position: "CHIEF PATRON",
+      bio: "I am happy to associate with society to contribute for the children suffering from Thalassemia and Sickle Cell Anemia."
+    },
+    {
+      name: "MR. PRADEEP UPPALA",
+      position: "CHIEF PATRON",
+      bio: "I Believe: We are constituted so that simple acts of kindness, such as giving to charity or expressing gratitude, have a positive effect on our long-term on all the patients."
+    },
+    {
+      name: "MR. CHANDRAKANT AGARWAL",
+      position: "PRESIDENT",
+      bio: "I Believe: We must value life and treasure each breath we take. We must also value each person and touch others lives every day."
+    },
+    {
+      name: "MRS. RATNAVALI KOTTAPALLI",
+      position: "VICE PRESIDENT",
+      bio: "I Believe: A little thought and a little kindness are often worth more than a great deal of money."
+    },
+    {
+      name: "DR. SUMAN JAIN",
+      position: "SECRETARY & CEO",
+      bio: "I Believe: If we all take care of one another and go the extra mile to help and work together, we all gain each one of us is lifted up."
+    },
+    {
+      name: "MR. M A ALEEM BAIG",
+      position: "JOINT SECRETARY",
+      bio: "I Believe: Goodness is about character integrity, honesty, kindness, generosity, moral courage, and the like. More than anything else, it is about an act of care for other people."
+    },
+    {
+      name: "MR. MANOJ RUPANI",
+      position: "TREASURER",
+      bio: "I Believe: My religion is very simple. It is all about kindness & care."
+    },
+    {
+      name: "DR D VENKATA RAMANA",
+      position: "EXECUTIVE MEMBER (FORMER PRESIDENT)",
+      bio: "The best and most beautiful things in the world cannot be seen or even touched they must be felt with the heart."
+    },
+    {
+      name: "MRS. RAMA VUPPALA",
+      position: "TREASURER",
+      bio: "I Believe: What you do for others makes more impact on your life than what you do for yourself."
+    },
+    {
+      name: "DR. J RAJESHWAR",
+      position: "ADVISORY MEMBER",
+      bio: "I Believe: Here are the values that I stand for: kindness, compassion, treating people the way you want to be treated and helping those in need"
+    },
+    {
+      name: "DR SHIRISHA RANI",
+      position: "ADVISORY MEMBER",
+      bio: "In the end, it's not the years in your life that count. It's the life in your years what you did to make a difference in others life."
+    },
+    {
+      name: "Mr. Shivratan Agarwal",
+      position: "Executive Member",
+      bio: ""
+    },
+    {
+      name: "Mr. Ritesh Devda",
+      position: "Executive Member",
+      bio: ""
+    },
+    {
+      name: "Mr. Mohd Amin",
+      position: "Executive Member",
+      bio: ""
+    },
+    {
+      name: "Mr. D. Srinigvas Rao",
+      position: "Executive Member",
+      bio: ""
+    },
+    {
+      name: "Mr. Kanyalal Dodwani",
+      position: "Executive Member",
+      bio: ""
+    },
+    {
+      name: "Mr. Surender Agarwal",
+      position: "Executive Member",
+      bio: ""
+    },
+    {
+      name: "Mr. K. Kiran Kumar",
+      position: "Executive Member",
+      bio: ""
+    },
+    {
+      name: "Mr. Rajesh Jain",
+      position: "Executive Member",
+      bio: ""
+    }
+  ];
+
+  return (
+    <div className="bg-gradient-to-b from-blue-50 to-white p-8">
+      <div className="max-w-7xl mx-auto">
+        <h1 className="text-4xl font-bold text-blue-900 mb-12 text-center">Board Members</h1>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {members.map((member, index) => (
+            <div 
+              key={index} 
+              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-blue-100"
+            >
+              <h2 className="text-xl font-bold text-blue-800 mb-2">{member.name}</h2>
+              <p className="text-blue-600 font-semibold mb-3">{member.position}</p>
+              {member.bio && (
+                <p className="text-gray-600 text-sm leading-relaxed">{member.bio}</p>
+              )}
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const Organogram = () => {
   return (
