@@ -3,36 +3,36 @@ import { Routes, Route } from 'react-router-dom';
 
 const Overview = () => {
   return (
-    <div className="max-w-4xl">
+    <div className="max-w-4xl bg-blue-50">
       <Routes>
         <Route 
           index 
           element={
             <div>
-              <h1 className="text-3xl font-bold text-gray-900 mb-8">TSCS Overview</h1>
+              <h1 className="text-3xl font-bold text-blue-900 mb-8">TSCS Overview</h1>
               
               <div className="space-y-6">
-                <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                  <h2 className="text-xl font-semibold text-gray-800 mb-4">Our Organization</h2>
-                  <p className="text-gray-600">
+                <div className="bg-white p-6 rounded-lg shadow-sm border border-blue-100 hover:bg-blue-50 transition-colors">
+                  <h2 className="text-xl font-semibold text-blue-800 mb-4">Our Organization</h2>
+                  <p className="text-blue-700">
                     The Thalassemia and Sickle Cell Society (TSCS) is a premier institution dedicated 
                     to the treatment and management of blood disorders. Our comprehensive approach 
                     combines medical excellence, research, and community service.
                   </p>
                 </div>
 
-                <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                  <h2 className="text-xl font-semibold text-gray-800 mb-4">Leadership</h2>
-                  <p className="text-gray-600">
+                <div className="bg-white p-6 rounded-lg shadow-sm border border-blue-100 hover:bg-blue-50 transition-colors">
+                  <h2 className="text-xl font-semibold text-blue-800 mb-4">Leadership</h2>
+                  <p className="text-blue-700">
                     Our organization is guided by experienced professionals across medical, 
                     research, and administrative domains, ensuring excellence in patient care 
                     and organizational management.
                   </p>
                 </div>
 
-                <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                  <h2 className="text-xl font-semibold text-gray-800 mb-4">Infrastructure</h2>
-                  <p className="text-gray-600">
+                <div className="bg-white p-6 rounded-lg shadow-sm border border-blue-100 hover:bg-blue-50 transition-colors">
+                  <h2 className="text-xl font-semibold text-blue-800 mb-4">Infrastructure</h2>
+                  <p className="text-blue-700">
                     State-of-the-art facilities equipped with modern medical equipment and 
                     supported by trained healthcare professionals to provide the best care 
                     for our patients.
@@ -54,10 +54,9 @@ const Overview = () => {
   );
 };
 
-// Sub-components for each section
 const BoardMembers = () => (
-  <div>
-    <h1 className="text-3xl font-bold text-gray-900 mb-8">Board Members</h1>
+  <div className="bg-blue-50 p-6">
+    <h1 className="text-3xl font-bold text-blue-900 mb-8">Board Members</h1>
     <div className="grid md:grid-cols-2 gap-6">
       {[
         {
@@ -65,78 +64,208 @@ const BoardMembers = () => (
           position: "President",
           bio: "Over 20 years of experience in treating blood disorders."
         },
-        // Add more board members here
       ].map((member, index) => (
-        <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-          <h2 className="text-xl font-semibold text-gray-800 mb-2">{member.name}</h2>
-          <p className="text-red-600 mb-2">{member.position}</p>
-          <p className="text-gray-600">{member.bio}</p>
+        <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-blue-100 hover:bg-blue-50 transition-colors">
+          <h2 className="text-xl font-semibold text-blue-800 mb-2">{member.name}</h2>
+          <p className="text-blue-600 mb-2">{member.position}</p>
+          <p className="text-blue-700">{member.bio}</p>
         </div>
       ))}
     </div>
   </div>
 );
 
-const Organogram = () => (
-  <div>
-    <h1 className="text-3xl font-bold text-gray-900 mb-8">Organizational Structure</h1>
-    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-      {/* Add organizational chart here */}
+const Organogram = () => {
+  return (
+    <div className="w-full max-w-6xl mx-auto bg-blue-50 p-6">
+      <h1 className="text-3xl font-bold text-blue-900 mb-8">Organizational Structure</h1>
+      
+      {/* Main container */}
+      <div className="flex flex-col space-y-4">
+        {/* Title box */}
+        <div className="bg-blue-200 p-4 rounded-lg text-center font-semibold text-blue-900">
+          Thalassemia and Sickle Cell Society (TSCS)
+          <div className="text-sm">1998</div>
+        </div>
+
+        {/* Boxes container */}
+        <div className="grid grid-cols-7 gap-4">
+          {/* Box 1 */}
+          <div className="col-span-1 bg-blue-100 p-4 rounded-lg text-sm hover:bg-blue-200 transition-colors">
+            <div className="text-center text-blue-800">
+              Kamala Hospital and Research Centre for Thalassemia and Sickle Cell patients (A unit of TSCS)
+              <div className="mt-2 font-semibold">1998</div>
+            </div>
+          </div>
+
+          {/* Box 2 */}
+          <div className="col-span-1 bg-blue-100 p-4 rounded-lg text-sm hover:bg-blue-200 transition-colors">
+            <div className="text-center text-blue-800">
+              Vuppala Venkaiah Memorial Blood Bank
+              <div className="mt-2 font-semibold">2010</div>
+            </div>
+          </div>
+
+          {/* Box 3 */}
+          <div className="col-span-1 bg-blue-100 p-4 rounded-lg text-sm hover:bg-blue-200 transition-colors">
+            <div className="text-center text-blue-800">
+              Vuppala Krishna Rao & Chandraka la Diagnostic Services
+              <div className="mt-2 font-semibold">2011</div>
+            </div>
+          </div>
+
+          {/* Box 4 */}
+          <div className="col-span-1 bg-blue-100 p-4 rounded-lg text-sm hover:bg-blue-200 transition-colors">
+            <div className="text-center text-blue-800">
+              Kamala Bai Agarwal (Duke's) Diagnostic Laboratory
+              <div className="mt-2 font-semibold">2020</div>
+            </div>
+          </div>
+
+          {/* Box 5 */}
+          <div className="col-span-1 bg-blue-100 p-4 rounded-lg text-sm hover:bg-blue-200 transition-colors">
+            <div className="text-center text-blue-800">
+              Kamala Hospital and Research Centre (Prema Bai Dakotiya Charitable and Memorial Society)
+              <div className="mt-2 font-semibold">2020</div>
+            </div>
+          </div>
+
+          {/* Box 6 */}
+          <div className="col-span-1 bg-blue-100 p-4 rounded-lg text-sm hover:bg-blue-200 transition-colors">
+            <div className="text-center text-blue-800">
+              TSCS Khammam
+              <div className="mt-2 font-semibold">2022</div>
+            </div>
+          </div>
+
+          {/* Box 7 */}
+          <div className="col-span-1 bg-blue-100 p-4 rounded-lg text-sm hover:bg-blue-200 transition-colors">
+            <div className="text-center text-blue-800">
+              Antinatal Screening Project - Mahabubnagar District & Medchl-Malkajgiri District
+              <div className="mt-2 font-semibold">2024</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const MedicalTeam = () => (
-  <div>
-    <h1 className="text-3xl font-bold text-gray-900 mb-8">Medical Team</h1>
+  <div className="bg-blue-50 p-6">
+    <h1 className="text-3xl font-bold text-blue-900 mb-8">Medical Team</h1>
     <div className="space-y-6">
-      <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-        <h2 className="text-xl font-semibold text-gray-800 mb-4">Our Specialists</h2>
+      <div className="bg-white p-6 rounded-lg shadow-sm border border-blue-100">
+        <h2 className="text-xl font-semibold text-blue-800 mb-4">Our Specialists</h2>
         <div className="grid md:grid-cols-2 gap-4">
-          {/* Add medical team members here */}
+          <div className="space-y-4">
+            <div className="p-3 rounded hover:bg-blue-50 transition-colors text-blue-700">Dr. SUMAN JAIN, MBBS, DCH, Paediatrician</div>
+            <div className="p-3 rounded hover:bg-blue-50 transition-colors text-blue-700">Dr. SUJAI SUNEETHA, MBBS, DCP, Ph.D, Pathologist & Leprologist</div>
+            <div className="p-3 rounded hover:bg-blue-50 transition-colors text-blue-700">Dr. K SAROJA, DHIM, Medical Officer</div>
+            <div className="p-3 rounded hover:bg-blue-50 transition-colors text-blue-700">Dr. MOHD IQBAL MOINUDDIN, MBBS, Medical Officer</div>
+            <div className="p-3 rounded hover:bg-blue-50 transition-colors text-blue-700">Dr. SARASWATHI SUSARLA, MBBS, MD (General Medicine)</div>
+            <div className="p-3 rounded hover:bg-blue-50 transition-colors text-blue-700">Dr. SIRISHA KUSUMA BODDU, MBBS, MD, FRCPCH (UK) (Endocrinologist)</div>
+            <div className="p-3 rounded hover:bg-blue-50 transition-colors text-blue-700">Dr. SIRISHA RANI, MBBS, MD, MRCPCH (Paed. Hematol Oncologist)</div>
+            <div className="p-3 rounded hover:bg-blue-50 transition-colors text-blue-700">Dr. PARINITHA, MBBS, MD, MRCPCH, CCT (Paed. Hemato Oncologist)</div>
+            <div className="p-3 rounded hover:bg-blue-50 transition-colors text-blue-700">Dr. RAMANA DANDAMUDI, MBBS, DCH, MRCP (Paed. Hemato Oncologist)</div>
+            <div className="p-3 rounded hover:bg-blue-50 transition-colors text-blue-700">Dr. D M NAIK, MBBS, MD, Pathology (Pathologist)</div>
+            <div className="p-3 rounded hover:bg-blue-50 transition-colors text-blue-700">Dr. A RAGHAVENDRA, MBBS, MD, FSCAI (Cardiologist)</div>
+            <div className="p-3 rounded hover:bg-blue-50 transition-colors text-blue-700">Dr. B SWETHA, MBBS, MDRD (Radiologist)</div>
+          </div>
+          <div className="space-y-4">
+            <div className="p-3 rounded hover:bg-blue-50 transition-colors text-blue-700">Dr. ANURADHA KULKARNI, MBBS, MS, Opthal (Ophthalmologist)</div>
+            <div className="p-3 rounded hover:bg-blue-50 transition-colors text-blue-700">Prof. V R RAO, M.Sc, Ph.D, Genetic Epidemiology (Population)</div>
+            <div className="p-3 rounded hover:bg-blue-50 transition-colors text-blue-700">Dr. V SANDHYA, MBBS, MD, FNB (Paediatric Hemato Oncologist)</div>
+            <div className="p-3 rounded hover:bg-blue-50 transition-colors text-blue-700">Dr. B VARSHINI, MBBS, DNB, FNB (Paediatric Hemato Oncologist)</div>
+            <div className="p-3 rounded hover:bg-blue-50 transition-colors text-blue-700">Dr. CH SAMPATH REDDY, MDS, FDS, RCPS, MFDS, RCS (Dentist)</div>
+            <div className="p-3 rounded hover:bg-blue-50 transition-colors text-blue-700">Dr. LEENATHA REDDY, MBBS, MRCPCH (CCT) (Pediatric Adole. Endocrinologist)</div>
+            <div className="p-3 rounded hover:bg-blue-50 transition-colors text-blue-700">Dr. PARTHA PAL, MBBS, MD, MRCP (UK), DNB (Gastro, ESEGH (UK))</div>
+            <div className="p-3 rounded hover:bg-blue-50 transition-colors text-blue-700">Dr. PADMA G, M.Sc, Ph.D, Human Genetics</div>
+            <div className="p-3 rounded hover:bg-blue-50 transition-colors text-blue-700">Dr MAMATHA R</div>
+            <div className="p-3 rounded hover:bg-blue-50 transition-colors text-blue-700">Dr. PRADEEP NAIK, M.Sc, Ph.D, Bio-Chemistry</div>
+            <div className="p-3 rounded hover:bg-blue-50 transition-colors text-blue-700">Cardiologist - Arogyasri</div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 );
 
-const ResearchTeam = () => (
-  <div>
-    <h1 className="text-3xl font-bold text-gray-900 mb-8">Research Advisory Team</h1>
-    <div className="space-y-6">
-      <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-        <h2 className="text-xl font-semibold text-gray-800 mb-4">Research Focus Areas</h2>
-        {/* Add research focus areas */}
-      </div>
-      <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-        <h2 className="text-xl font-semibold text-gray-800 mb-4">Team Members</h2>
-        {/* Add research team members */}
+const ResearchTeam = () => {
+  const teamMembers = [
+    { id: 1, name: "Dr. SUMAN JAIN", credentials: "MBBS, DCH", role: "Pediatrician, Chief Medical Research Officer" },
+    { id: 2, name: "Dr. SUJAI SUNEETHA", credentials: "MBBS, DCP, PhD", role: "Pathologist & Leprologist" },
+    { id: 3, name: "Dr. K SAROJA", credentials: "BHMS, DHHM", role: "Medical Officer" },
+    { id: 4, name: "Dr. MOHD IQBAL MOINUDDIN", credentials: "MBBS", role: "Medical Officer" },
+    { id: 5, name: "Dr. SARASWATHI SUSARLA", credentials: "MBBS, MD", role: "General Medicine" },
+    { id: 6, name: "Dr. SIRISHA RANI", credentials: "MBBS, MD, MRCPCH", role: "Paed. Hemato Oncologist" },
+    { id: 7, name: "Dr. SIRISHA KUSUMA", credentials: "MBBS, MD Pediatrics (PGIMER), FRCPCH (UK)", role: "Endocrinologist" },
+    { id: 8, name: "Dr. PARINITHA", credentials: "MBBS, MD, MRCPCH, CCT", role: "Paed. Hemato Oncologist" },
+    { id: 9, name: "Dr. RAMANA DANDAMUDI", credentials: "MBBS, DCH, MRCP", role: "Paed. Hemato Oncologist" },
+    { id: 10, name: "Dr. D M NAIK", credentials: "MBBS, MD", role: "Pathology (Pathologist)" },
+    { id: 11, name: "Dr. A RAGHAVENDER GOUD", credentials: "MBBS, MD, FSCAI", role: "Cardiologist" },
+    { id: 12, name: "Dr. B SWETHA", credentials: "MBBS, MDRD", role: "Radiologist" },
+    { id: 13, name: "Dr. ANURADHA KULKARNI", credentials: "MBBS, MS", role: "Ophthal (Ophthalmologist)" },
+    { id: 14, name: "Prof. V R RAO", credentials: "M.Sc, PhD", role: "Genetic Epidemiologist (Population)" },
+    { id: 15, name: "Dr. G PADMA", credentials: "M.Sc, PhD Genetics", role: "Sr. Research Scientist" },
+    { id: 16, name: "Dr. V SANDHYA", credentials: "MBBS, MD, FNB", role: "Paediatric Hemato Oncologist" },
+    { id: 17, name: "Dr. B VARSHINI", credentials: "MBBS, DNB, FNB", role: "Paediatric Hemato Oncologist" },
+    { id: 18, name: "Dr. MAMATHA", credentials: "PhD Genetics", role: "Scientist" },
+    { id: 19, name: "Dr. PRADEEP NAIK", credentials: "M.Sc, PhD", role: "Bio-Chemistry" },
+    { id: 20, name: "Dr. KURAPATI PRADEEP KUMAR", credentials: "MBBS, MD", role: "Paediatrician, Khammam" },
+    { id: 21, name: "Dr. RUDRA GOTHAM NARESH", credentials: "MBBS, MD", role: "General Medicine, Khammam" },
+    { id: 22, name: "Dr. RAJAKUMAR YADAV", credentials: "MBBS", role: "Medical Officer, Khammam" },
+    { id: 23, name: "Dr. SANAULLA", credentials: "MBBS", role: "Medical Officer, Khammam" },
+    { id: 24, name: "Dr. R VENUGOPAL", credentials: "MBBS, MD", role: "Radiologist, Khammam" },
+    { id: 25, name: "Dr. CHARITHA SRANVANTHI BATTU", credentials: "MBBS, DNB", role: "Pathology, Khammam" }
+  ];
+
+  return (
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-blue-50">
+      <h1 className="text-3xl font-bold text-blue-900 mb-8">Research Advisory Team</h1>
+      <div className="space-y-6">
+        <div className="bg-white p-6 rounded-lg shadow-sm border border-blue-100">
+          <h2 className="text-xl font-semibold text-blue-800 mb-4">Team Members</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {teamMembers.map((member) => (
+              <div 
+                key={member.id}
+                className="p-4 border rounded-md hover:bg-blue-50 transition-colors"
+              >
+                <h3 className="font-medium text-blue-900">{member.name}</h3>
+                <p className="text-sm text-blue-700">{member.credentials}</p>
+                <p className="text-sm text-blue-600 mt-1">{member.role}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 const EthicalCommittee = () => (
-  <div>
-    <h1 className="text-3xl font-bold text-gray-900 mb-8">Ethical Committee</h1>
+  <div className="bg-blue-50 p-6">
+    <h1 className="text-3xl font-bold text-blue-900 mb-8">Ethical Committee</h1>
     <div className="space-y-6">
-      <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-        <h2 className="text-xl font-semibold text-gray-800 mb-4">Committee Members</h2>
-        {/* Add ethical committee members */}
-      </div>
-      <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-        <h2 className="text-xl font-semibold text-gray-800 mb-4">Guidelines</h2>
-        {/* Add ethical guidelines */}
+      <div className="bg-white p-6 rounded-lg shadow-sm border border-blue-100">
+        <h2 className="text-xl font-semibold text-blue-800 mb-4">Committee Members</h2>
+        <ul className="space-y-4 text-blue-700">
+          <li className="p-3 rounded hover:bg-blue-50 transition-colors">Patron Doctors</li>
+          <li className="p-3 rounded hover:bg-blue-50 transition-colors">Advisory Members</li>
+          <li className="p-3 rounded hover:bg-blue-50 transition-colors">Auditors</li>
+          <li className="p-3 rounded hover:bg-blue-50 transition-colors">Banker</li>
+        </ul>
       </div>
     </div>
   </div>
 );
 
 const Auditors = () => (
-  <div>
-    <h1 className="text-3xl font-bold text-gray-900 mb-8">Auditors</h1>
-    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-      <h2 className="text-xl font-semibold text-gray-800 mb-4">Financial Oversight</h2>
+  <div className="bg-blue-50 p-6">
+    <h1 className="text-3xl font-bold text-blue-900 mb-8">Auditors</h1>
+    <div className="bg-white p-6 rounded-lg shadow-sm border border-blue-100">
+      <h2 className="text-xl font-semibold text-blue-800 mb-4">Financial Oversight</h2>
       {/* Add auditor information */}
     </div>
   </div>
